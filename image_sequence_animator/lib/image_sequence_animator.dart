@@ -395,8 +395,8 @@ class ImageSequenceAnimatorState extends State<ImageSequenceAnimator> with Singl
             _colorChanged = false;
             _previousFrame = _animationController!.value.floor();
             if (_previousFrame < _frameCount)
-              _currentOfflineFrame = Image.asset(
-                _getDirectory(),
+              _currentOfflineFrame = Image.file(
+                File(_getDirectory()),
                 color: color,
                 gaplessPlayback: true,
               );
